@@ -1,0 +1,35 @@
+{{#> baseLayout}}
+
+  {{#*inline "content-block"}}
+    {{#> header }}
+      New consultation request
+    {{/header}}
+
+    {{#> paragraph}}
+      A new consultation request was recently submitted by {{ firstName }} {{ lastName }}.
+    {{/paragraph}}
+
+    {{#> attributesList}}
+      {{#> attributesListItem}}
+        <strong style="color: #51545E">First name:</strong> {{firstName}}
+      {{/attributesListItem}}
+      {{#> attributesListItem}}
+        <strong style="color: #51545E">Last name:</strong> {{lastName}}
+      {{/attributesListItem}}
+      {{#> attributesListItem}}
+        <strong style="color: #51545E">Email:</strong> {{email}}
+      {{/attributesListItem}}
+      {{#> attributesListItem}}
+        <strong style="color: #51545E">Phone:</strong> {{phone}}
+      {{/attributesListItem}}
+      {{#> attributesListItem}}
+        <strong style="color: #51545E">Topic:</strong> {{formattedTopic}}
+      {{/attributesListItem}}
+      {{#> attributesListItem}}
+        {{comments}}
+      {{/attributesListItem}}
+    {{/attributesList}}
+
+  {{/inline}}
+
+{{/baseLayout}}
